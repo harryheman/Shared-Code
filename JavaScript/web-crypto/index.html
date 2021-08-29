@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Cryptography API</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      h3,
+      .btn-box {
+        margin: 0.5em;
+        text-align: center;
+      }
+
+      input,
+      output {
+        display: block;
+        margin: 1em auto;
+        text-align: center;
+      }
+
+      output span {
+        color: green;
+      }
+    </style>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h3>Web Cryptography API</h3>
+      <input type="text" value="Hello, World!" class="form-control" />
+      <div class="btn-box">
+        <button class="btn btn-primary btn-send">Send message</button>
+        <button class="btn btn-success btn-get" disabled>Get message</button>
+      </div>
+      <output></output>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "redux-vs-vuex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Igor Agapov <aio350@yahoo.com>",
+  "license": "MIT",
+  "private": true
+}

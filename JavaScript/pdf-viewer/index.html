@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.min.js"></script>
+    <style>
+      body {
+        background: #222;
+      }
+      #viewer_box {
+        text-align: center;
+      }
+      input {
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="viewer_box">
+      <canvas></canvas>
+
+      <div id="buttons_box">
+        <button id="prev_btn">Prev</button>
+        <input type="number" min="1" step="1" value="1" id="current_page" />
+        <button id="next_btn">Next</button>
+        <button id="zoom_in">+</button>
+        <button id="zoom_out">-</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

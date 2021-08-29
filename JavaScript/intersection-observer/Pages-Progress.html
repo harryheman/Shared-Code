@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pages Progress</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      div {
+        width: 100%;
+        height: 100vh;
+        background: deepskyblue;
+        outline: 1px solid;
+      }
+      p {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+      let p = document.querySelector('p')
+      let n = 0
+
+      let observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              p.textContent = `${n++} div viewed`
+              observer.unobserve(entry.target)
+            }
+          })
+        },
+        { threshold: 0.9 }
+      )
+      document.querySelectorAll('div').forEach((div) => observer.observe(div))
+    </script>
+  </body>
+</html>

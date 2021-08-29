@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle, #666, #222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70px);
+  color: #ddd;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Nova Mono', monospace;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+span {
+  display: block;
+  font-size: 1.6em;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #ddd;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.material-icons {
+  font-size: 4em;
+  filter: invert();
+}
+
+input {
+  display: none;
+}
+
+canvas {
+  display: none;
+}

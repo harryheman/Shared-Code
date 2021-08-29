@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 2.4em;
+  color: #222;
+}
+
+.tools {
+  height: 100%;
+  display: inherit;
+  flex-direction: column;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.buttons {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  margin: 0.25em;
+  text-align: center;
+}
+
+p {
+  margin: 0.25em 0;
+  user-select: none;
+}
+
+select {
+  padding: 0.25em 0.5em;
+  font-size: 0.8em;
+}
+
+input,
+select {
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='number'] {
+  width: 30%;
+  padding: 0.25em 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+input[type='color'] {
+  width: 30px;
+  height: 30px;
+}
+
+.buttons input {
+  width: 80%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+}
+
+span {
+  font-size: 0.8em;
+}
+
+canvas {
+  display: none;
+  margin: 1em;
+  cursor: pointer;
+  box-shadow: 0 0 1px #222;
+}

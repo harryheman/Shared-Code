@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PixelArt Maker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <h1>PixelArt Maker</h1>
+    <div class="tools">
+      <div>
+        <p>Shape Form</p>
+        <select>
+          <option value="squares">Square</option>
+          <option value="circles">Circle</option>
+        </select>
+      </div>
+      <div class="numbers">
+        <div>
+          <p>
+            Shape Width <br />
+            <span>(from 10 to 50)</span>
+          </p>
+          <input type="number" value="20" class="shapeWidth" />
+        </div>
+        <div>
+          <p>
+            Shape Number <br />
+            <span>(from 10 to 50)</span>
+          </p>
+          <input type="number" value="30" class="shapeNumber" />
+        </div>
+      </div>
+      <div class="colors">
+        <div>
+          <p>Background Color</p>
+          <input type="color" value="#ffff00" required class="backColor" />
+        </div>
+        <div>
+          <p>Shape Color</p>
+          <input type="color" value="#0000ff" class="shapeColor" />
+        </div>
+      </div>
+      <div class="buttons">
+        <input type="button" value="Generate Canvas" class="generate" />
+        <input type="button" value="Show/Hide Numbers" class="show" />
+        <input type="button" value="Save/Delete Image" class="save" />
+        <input type="button" value="Clear Canvas" class="clear" />
+        <input type="button" value="Delete Canvas" class="delete" />
+      </div>
+    </div>
+    <canvas></canvas>
+  </body>
+</html>

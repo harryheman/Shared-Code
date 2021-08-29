@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  background: #8360c3;
+  background: linear-gradient(135deg, #2ebf91, #8360c3);
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+.ui.container {
+  max-width: 480px !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+.ui.form {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.ui.form .field > label {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.ui.button {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.email-error {
+  color: #f93154;
+  text-align: left;
+}

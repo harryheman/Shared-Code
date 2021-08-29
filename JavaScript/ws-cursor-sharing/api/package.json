@@ -1,0 +1,14 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.1",
+    "nanoid": "^3.1.23",
+    "nodemon": "^2.0.12",
+    "ws": "^7.5.3"
+  }
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Use Data</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        max-width: 512px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      section *:not(h3) {
+        text-align: left;
+      }
+
+      input,
+      button {
+        margin: 0.4em;
+      }
+
+      label,
+      input {
+        cursor: pointer;
+      }
+
+      .right-answer,
+      .explanation {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Use data</h1>
+
+    <script>
+      const getData = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        return data
+      }
+
+      getData('data.json').then((data) => {
+        console.table(data)
+
+        createTest(data)
+      })
+
+      let name = Date.now()
+      const createTest = (data) => {
+        for (const item in data) {
+          console.log(data[item])
+
+          const { question, answers, rightAnswer, explanation } = data[item]
+
+          name++
+
+          const questionTemplate = `
+                    <hr>
+                    <section>
+                        <h3>Question ${+item + 1}: ${question}</h3>
+                        <form>
+                            <legend>Answers</legend>
+                            ${answers.reduce(
+                              (html, ans) =>
+                                (html += `<label><input type="radio" name="${name}">${ans}</label><br>`),
+                              ''
+                            )}
+                        </form>
+                        <p class="right-answer">Right answer: ${rightAnswer}</p>
+                        <p class="explanation">Explanation: ${explanation}</p>
+                    </section>
+                `
+
+          document.body.insertAdjacentHTML('beforeend', questionTemplate)
+        }
+
+        const forms = document.querySelectorAll('form')
+
+        forms.forEach((form) => {
+          const input = form.querySelector('input')
+          input.click()
+        })
+
+        const btn = document.createElement('button')
+        btn.className = 'btn btn-primary'
+        btn.textContent = 'Check answers'
+        document.body.append(btn)
+
+        btn.addEventListener('click', () => {
+          const answers = []
+
+          forms.forEach((form) => {
+            const chosenAnswer = form.querySelector('input:checked')
+              .parentElement.textContent
+            const rightAnswer = form.nextElementSibling.textContent.replace(
+              'Right answer: ',
+              ''
+            )
+            answers.push([chosenAnswer, rightAnswer])
+          })
+
+          console.log(answers)
+
+          checkAnswers(answers)
+        })
+
+        const checkAnswers = (answers) => {
+          let rightAnswers = 0
+          let wrongAnswers = 0
+
+          for (const answer of answers) {
+            if (answer[0] === answer[1]) {
+              rightAnswers++
+            } else {
+              wrongAnswers++
+
+              const wrongSection = forms[answers.indexOf(answer)].parentElement
+
+              wrongSection.querySelector('.right-answer').style.display =
+                'block'
+              wrongSection.querySelector('.explanation').style.display = 'block'
+            }
+          }
+
+          const percent = parseInt((rightAnswers / answers.length) * 100)
+
+          let result = ''
+
+          if (percent >= 80) {
+            result = 'Great job, super genius!'
+          } else if (percent > 50) {
+            result = 'Not bad, but you can do it better!'
+          } else {
+            result = 'Very bad, try again!'
+          }
+
+          const resultTemplate = `
+                    <h3>Your result</h3>
+                    <p>Right answers: ${rightAnswers}</p>
+                    <p>Wrong answers: ${wrongAnswers}</p>
+                    <p>Percentage of correct answers: ${percent}</p>
+                    <p>${result}</p>
+                `
+
+          document.body.insertAdjacentHTML('beforeend', resultTemplate)
+        }
+      }
+    </script>
+  </body>
+</html>

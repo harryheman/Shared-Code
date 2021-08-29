@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Audio Player</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="./img/icons/64.png" />
+
+    <link rel="manifest" href="./manifest.json" />
+
+    <link rel="stylesheet" href="./css/main.css" rel="preload" />
+
+    <script src="./js/main.js" type="module" defer></script>
+  </head>
+
+  <body>
+    <div class="equal-box">
+      <div class="preset-box">
+        <button class="pop-button">pop</button>
+        <button class="rock-button">rock</button>
+        <button class="rap-button">rap</button>
+        <button class="default-button">default</button>
+      </div>
+
+      <div class="input-box">
+        <div class="input-item">
+          <p class="frequency-amount">31</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">87</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">175</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">350</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">700</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">1.4k</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">2.8k</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">5.6k</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">11.2k</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+        <div class="input-item">
+          <p class="frequency-amount">16k</p>
+          <input type="range" />
+          <p class="frequency-value">0dB</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="player-box">
+      <p class="track-title">Track Title</p>
+      <canvas width="300" height="50"></canvas>
+
+      <div class="button-box">
+        <div class="absolute-position">
+          <button class="play-button">play</button>
+          <button class="pause-button">pause</button>
+        </div>
+        <button class="stop-button">stop</button>
+        <button class="backward-button">backward</button>
+        <button class="forward-button">forward</button>
+        <button class="next-button">next</button>
+        <button class="prev-button">previous</button>
+      </div>
+
+      <div class="track-box">
+        <p class="track-time">0:00</p>
+        <progress value="0" class="track-bar"></progress>
+        <p class="track-duration">0:00</p>
+      </div>
+
+      <div class="volume-box">
+        <div class="absolute-position">
+          <button class="volume-button">volume</button>
+          <button class="mute-button">mute</button>
+        </div>
+
+        <progress value="100" max="100" class="volume-bar"></progress>
+        <p class="volume-level">100%</p>
+      </div>
+
+      <div class="button-box">
+        <div class="absolute-position">
+          <input type="file" multiple accept="audio/*" class="upload-input" />
+          <button class="upload-button">upload</button>
+          <button class="reload-button">reload</button>
+        </div>
+
+        <div class="absolute-position">
+          <button class="shuffle-button">shuffle</button>
+          <button class="check-button">check</button>
+        </div>
+
+        <div class="absolute-position">
+          <button class="fast-button">fast</button>
+          <button class="normal-button">normal</button>
+        </div>
+
+        <button class="visual-button">visual</button>
+        <button class="equal-button">equalizer</button>
+        <button class="list-button">list</button>
+      </div>
+    </div>
+
+    <div class="track-list"></div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  display: inline-block;
+}
+
+p,
+span {
+  font-family: monospace;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}

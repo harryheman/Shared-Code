@@ -1,0 +1,20 @@
+{
+  "name": "Audio Player",
+  "short_name": "Audio Player",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eee",
+  "theme_color": "#111",
+  "description": "Audio Player",
+  "icons": [
+    {
+      "src": "./img/icons/64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ],
+  "serviceworker": {
+    "src": "./sw.js"
+  }
+}

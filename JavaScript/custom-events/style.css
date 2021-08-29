@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #333;
+  font-family: 'Audiowide', cursive;
+  color: #f0f0f0;
+  letter-spacing: 2px;
+}
+h1 {
+  text-align: center;
+  color: orange;
+}
+main {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-evenly;
+}
+.form {
+  flex-basis: 500px;
+  border: solid 1px yellow;
+  padding: 10px 50px;
+  box-shadow: 0 0 3px orange;
+  border-radius: 5px;
+}
+.form section {
+  border: 2px dotted yellow;
+  border-radius: 5px;
+  box-shadow: 0 0 3px orange;
+  transition: all 0.2s;
+  margin-bottom: 30px;
+  padding: 50px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.form section:hover {
+  box-shadow: 0 0 8px yellow;
+  border-color: orange;
+}
+.form section label {
+  border-bottom: 2px dashed orange;
+  cursor: pointer;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px #cccccc;
+  box-shadow: 0 0 2px #cccccc;
+  font-family: inherit;
+  letter-spacing: 1px;
+}
+#file-input {
+  display: none;
+}
+.profile-card {
+  flex-basis: 300px;
+  border: solid 2px yellow;
+  border-radius: 5px;
+  box-shadow: 0 0 5px orange;
+  padding: 40px 35px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.img-container {
+  margin-bottom: 50px;
+}
+.img-container img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.profile-card .name {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+.profile-card .occupation {
+  font-size: 1.2rem;
+}

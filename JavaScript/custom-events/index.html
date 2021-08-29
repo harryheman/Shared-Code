@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Profile Card</h1>
+    <main>
+      <form class="form">
+        <h2>Enter Profile Details</h2>
+        <section>
+          Drag an image into this section or
+          <label>
+            select an image
+            <input type="file" id="file-input" accept="image/*" />
+          </label>
+        </section>
+        <div class="form-group">
+          <label for="name-input"> Enter Name </label>
+          <input type="text" name="name" id="name-input" autofocus />
+        </div>
+        <div class="form-group">
+          <label for="occupation-input"> Enter Occupation </label>
+          <input type="text" name="occupation" id="occupation-input" />
+        </div>
+      </form>
+
+      <section class="profile-card">
+        <div class="img-container">
+          <img src="http://via.placeholder.com/200" alt="" />
+        </div>
+        <span class="name">No Name Entered</span>
+        <span class="occupation">No Occupation Entered</span>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

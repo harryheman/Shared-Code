@@ -1,0 +1,43 @@
+body {
+  max-width: 768px;
+  margin: 0 auto;
+  color: #222;
+  text-align: center;
+}
+canvas {
+  display: block;
+  margin: 1rem auto;
+  border: 1px dashed #222;
+  border-radius: 4px;
+}
+div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+section {
+  padding: 1rem;
+}
+label {
+  display: block;
+}
+input {
+  margin: 0.25rem 0;
+}
+input:not([type='color']) {
+  width: 50px;
+}
+button {
+  margin: 0.25rem auto;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+li {
+  margin: 0.5rem auto;
+  width: 320px;
+  border-bottom: 1px dotted #222;
+}
+p {
+  margin: 0.25rem 0;
+}

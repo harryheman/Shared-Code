@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Background Change</title>
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+      }
+
+      div {
+        width: 640px;
+        height: 480px;
+        outline: 2px solid;
+        margin: 100vh auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+
+    <script>
+      window.addEventListener('load', (event) => {
+        let box = document.querySelector('div')
+        // ratio - процент видимости элемента
+        let prevRatio = 0.0
+
+        let observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              let curRatio = entry.intersectionRatio
+
+              curRatio > prevRatio
+                ? (entry.target.style.background = `rgba(40,40,190,${curRatio})`)
+                : (entry.target.style.background = `rgba(190,40,40,${curRatio})`)
+
+              prevRatio = curRatio
+            })
+          },
+          {
+            threshold: buildThresholdList()
+          }
+        )
+
+        observer.observe(box)
+
+        function buildThresholdList() {
+          let thresholds = []
+          let steps = 20
+
+          for (let i = 1.0; i <= steps; i++) {
+            let ratio = i / steps
+            thresholds.push(ratio)
+          }
+          return thresholds
+        }
+      })
+    </script>
+  </body>
+</html>

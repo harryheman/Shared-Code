@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Enter a letter</p>
+
+    <div class="box">
+      <svg width="200" height="250">
+        <!--rod-->
+        <line x1="60" y1="20" x2="140" y2="20" />
+        <line x1="140" y1="20" x2="140" y2="50" />
+        <line x1="60" y1="20" x2="60" y2="230" />
+
+        <!--head-->
+        <circle cx="140" cy="70" r="20" class="part" />
+        <!--body-->
+        <line x1="140" y1="90" x2="140" y2="150" class="part" />
+        <!--arms-->
+        <line x1="140" y1="120" x2="120" y2="100" class="part" />
+        <line x1="140" y1="120" x2="160" y2="100" class="part" />
+        <!--legs-->
+        <line x1="140" y1="150" x2="120" y2="180" class="part" />
+        <line x1="140" y1="150" x2="160" y2="180" class="part" />
+      </svg>
+
+      <div class="wrong-letters"></div>
+      <div class="word"></div>
+    </div>
+
+    <div class="popup">
+      <p class="message"></p>
+      <p class="reveal-word"></p>
+      <button>Play Again</button>
+    </div>
+
+    <div class="notification">
+      <p>You have already entered this letter</p>
+    </div>
+  </body>
+</html>

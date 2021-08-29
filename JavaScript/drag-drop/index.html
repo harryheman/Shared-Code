@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <h1>Drag & Drop</h1>
+    <main class="row">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Enter new todo: </span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="todo4"
+          data-name="todo-input"
+        />
+        <div class="input-group-append">
+          <button class="btn btn-success" data-name="add-btn">Add</button>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <h3>Todos</h3>
+        <ul class="list-group" data-name="todos-list">
+          <li class="list-group-item" data-id="1" draggable="true">
+            <p>todo1</p>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              data-name="remove-btn"
+            >
+              X
+            </button>
+          </li>
+          <li class="list-group-item" data-id="2" draggable="true">
+            <p>todo2</p>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              data-name="remove-btn"
+            >
+              X
+            </button>
+          </li>
+          <li class="list-group-item" data-id="3" draggable="true">
+            <p>todo3</p>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              data-name="remove-btn"
+            >
+              X
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-4">
+        <h3>In Progress</h3>
+        <ul class="list-group" data-name="in-progress-list"></ul>
+      </div>
+
+      <div class="col-4">
+        <h3>Completed</h3>
+        <ul class="list-group" data-name="completed-list"></ul>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create JSON</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        max-width: 512px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      input {
+        text-align: center;
+      }
+
+      .get-data {
+        margin-left: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="row main">
+      <h3>Create JSON</h3>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s5">
+            <label>key</label>
+            <input type="text" value="1" required />
+          </div>
+          <div class="input-field col s2">
+            <p>:</p>
+          </div>
+          <div class="input-field col s5">
+            <label>value</label>
+            <input type="text" value="foo" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s5">
+            <label>key</label>
+            <input type="text" value="2" required />
+          </div>
+          <div class="input-field col s2">
+            <p>:</p>
+          </div>
+          <div class="input-field col s5">
+            <label>value</label>
+            <input type="text" value="bar" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s5">
+            <label>key</label>
+            <input type="text" value="3" required />
+          </div>
+          <div class="input-field col s2">
+            <p>:</p>
+          </div>
+          <div class="input-field col s5">
+            <label>value</label>
+            <input type="text" value="baz" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn waves-effect waves-light create-json">
+            create json
+            <i class="material-icons right">send</i>
+          </button>
+          <a class="waves-effect waves-light btn get-data"
+            ><i class="material-icons right">cloud</i>get data</a
+          >
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document.querySelector('.create-json').addEventListener(
+        'click',
+        (ev) => {
+          ev.preventDefault()
+
+          const inputs = document.querySelectorAll('input')
+
+          const arr = []
+          for (let i = 0; i < inputs.length; ++i) {
+            arr.push([inputs[i].value, inputs[++i].value])
+          }
+
+          console.log(arr)
+
+          const data = Object.fromEntries(arr)
+
+          console.log(data)
+
+          const file = new Blob([JSON.stringify(data)], {
+            type: 'application/json'
+          })
+
+          const link = document.createElement('a')
+          link.setAttribute('href', URL.createObjectURL(file))
+          link.setAttribute('download', 'data.json')
+          link.textContent = 'DOWNLOAD DATA'
+          document.querySelector('.main').append(link)
+          URL.revokeObjectURL(file)
+        },
+        { once: true }
+      )
+
+      document.querySelector('.get-data').addEventListener('click', () => {
+        ;(async () => {
+          const response = await fetch('data.json')
+
+          const data = await response.json()
+
+          console.table(data)
+        })()
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: space-between;
+  text-align: center;
+  color: #222;
+  overflow: hidden;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+a {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+a + a {
+  margin-left: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+div {
+  margin: 2rem;
+}
+
+div > article {
+  cursor: pointer;
+}
+
+div > article > * {
+  pointer-events: none;
+}
+
+footer p {
+  font-size: 1.5rem;
+}

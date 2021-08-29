@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules + Canvas</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div>
+      <section>
+        <h3>Circle</h3>
+        <label>
+          X:
+          <input type="number" value="75" data-prop="x" />
+        </label>
+        <label>
+          Y:
+          <input type="number" value="75" data-prop="y" />
+        </label>
+        <label>
+          Radius:
+          <input type="number" value="50" data-prop="radius" />
+        </label>
+        <label>
+          Color:
+          <input type="color" value="#ff0000" data-prop="color" />
+        </label>
+        <button data-btn="circle" class="draw_btn">Draw</button>
+      </section>
+
+      <section>
+        <h3>Square</h3>
+        <label>
+          X:
+          <input type="number" value="275" data-prop="x" />
+        </label>
+        <label>
+          Y:
+          <input type="number" value="175" data-prop="y" />
+        </label>
+        <label>
+          Length:
+          <input type="number" value="100" data-prop="length" />
+        </label>
+        <label>
+          Color:
+          <input type="color" value="#00ff00" data-prop="color" />
+        </label>
+        <button data-btn="square" class="draw_btn">Draw</button>
+      </section>
+
+      <section>
+        <h3>Triangle</h3>
+        <label>
+          X:
+          <input type="number" value="150" data-prop="x" />
+        </label>
+        <label>
+          Y:
+          <input type="number" value="100" data-prop="y" />
+        </label>
+        <label>
+          Length:
+          <input type="number" value="125" data-prop="length" />
+        </label>
+        <label>
+          Color:
+          <input type="color" value="#0000ff" data-prop="color" />
+        </label>
+        <button data-btn="triangle" class="draw_btn">Draw</button>
+      </section>
+    </div>
+    <button>Clear Canvas</button>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

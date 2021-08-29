@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Root Element</title>
+    <style>
+      p {
+        position: absolute;
+        margin: 1em;
+      }
+
+      .parent {
+        width: 100%;
+        outline: 2px solid;
+      }
+
+      .child {
+        height: 500px;
+        background: deepskyblue;
+        outline: 2px solid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="info"></p>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <script>
+      let info = document.querySelector('.info')
+      let parent = document.querySelector('.parent')
+      let child = document.querySelector('.child')
+      child.style.width = parent.offsetWidth - 50 + 'px'
+      info.textContent = `child width: ${child.offsetWidth}px`
+
+      let options = {
+        root: parent,
+        threshold: 1
+      }
+
+      let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (
+            entry.target.parentElement.offsetWidth - entry.target.offsetWidth <
+            50
+          ) {
+            entry.target.style.width = entry.target.offsetWidth - 50 + 'px'
+          }
+        })
+      }, options)
+
+      observer.observe(child)
+
+      window.addEventListener('resize', () => {
+        info.textContent = `child width: ${child.offsetWidth}px`
+        if (parent.offsetWidth - child.offsetWidth > 51) {
+          child.style.width = child.offsetWidth + 50 + 'px'
+        }
+      })
+    </script>
+  </body>
+</html>

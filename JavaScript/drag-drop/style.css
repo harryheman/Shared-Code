@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+}
+
+main {
+  max-width: 600px;
+}
+
+.input-group {
+  margin: 1rem;
+}
+
+.list-group {
+  min-height: 100px;
+  height: 100%;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div + div {
+  border-right: 1px dotted #222;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.completed p {
+  text-decoration: line-through;
+}
+
+.in-progress p {
+  border-bottom: 1px dashed #222;
+}
+
+.drop {
+  background: linear-gradient(#eee, transparent);
+  border-radius: 4px;
+}

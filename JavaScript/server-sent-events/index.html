@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Server-Sent Events</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card {
+        margin: 0 auto;
+        max-width: 512px;
+      }
+
+      img {
+        margin: 1rem;
+        max-width: 320px;
+      }
+
+      p {
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container text-center">
+      <h1>Server-Sent Events</h1>
+      <button class="btn btn-primary" data-type="start-btn">Start</button>
+      <button class="btn btn-danger" data-type="stop-btn" disabled>Stop</button>
+      <p data-type="event-log"></p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

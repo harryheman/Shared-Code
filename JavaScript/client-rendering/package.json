@@ -1,0 +1,13 @@
+{
+  "name": "client-side-rendering",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "open-cli": "^6.0.1"
+  },
+  "scripts": {
+    "dev": "open-cli http://localhost:1234 && nodemon index.js"
+  }
+}

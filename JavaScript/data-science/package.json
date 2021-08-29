@@ -1,0 +1,13 @@
+{
+  "name": "data-science",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "d3-node": "^2.2.2",
+    "regression": "^2.0.1",
+    "simple-statistics": "^7.7.0"
+  }
+}

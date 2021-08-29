@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Reader</title>
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        margin: 0 auto;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        max-width: 768px;
+        background: radial-gradient(circle, skyblue, steelblue);
+        color: #222;
+      }
+
+      div {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10em;
+        font-weight: bold;
+        border: 6px solid;
+        border-radius: 8px;
+        user-select: none;
+        cursor: pointer;
+      }
+
+      input {
+        display: none;
+      }
+
+      img,
+      audio,
+      video {
+        max-width: 80vw;
+        max-height: 80vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>+</div>
+    <input type="file" />
+  </body>
+</html>
