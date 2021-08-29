@@ -1,0 +1,12 @@
+body.dark {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+.dark .item {
+  background-color: #f0f0f0;
+}
+
+.dark .audio {
+  filter: invert(93%);
+}

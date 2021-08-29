@@ -1,0 +1,150 @@
+@import './css/profile.css';
+@import './css/buttons.css';
+@import './css/header.css';
+@import './css/search.css';
+@import './css/dark.css';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1024px;
+  background-color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #1c1c1c;
+  position: relative;
+}
+
+body.show {
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.title {
+  text-align: center;
+  margin: 0.5em;
+}
+
+h1.title {
+  color: #1c1c1c;
+  font-size: 1.6em;
+}
+
+h2.title {
+  font-size: 1.4em;
+}
+
+h3.title {
+  font-size: 1.2em;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  list-style: none;
+}
+
+.item {
+  margin: 0.75em;
+  padding-bottom: 0.5em;
+  width: 200px;
+  color: #1c1c1c;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+  content-visibility: auto;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.img_box {
+  max-width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.name,
+.date {
+  text-align: center;
+}
+
+.name {
+  margin: 0.5em 0.25em 0.25em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.info {
+  position: relative;
+  padding: 0 1.25em;
+  white-space: pre-wrap;
+  font-size: 1.1em;
+  line-height: 1.25em;
+  text-align: justify;
+}
+
+.audio {
+  display: block;
+  margin: 0.25em auto;
+  outline: none;
+  filter: invert(1%);
+  border-radius: 8px;
+}
+
+.footer {
+  padding: 0.75em 0;
+  margin-top: 0.5em;
+  background-image: linear-gradient(yellow, orange);
+  display: grid;
+  color: #1c1c1c;
+  place-items: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+}

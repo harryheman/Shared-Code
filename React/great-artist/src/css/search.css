@@ -1,0 +1,35 @@
+.search_input {
+  padding: 1em;
+  position: relative;
+  text-align: center;
+}
+
+.search_input::before {
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAQJJREFUKBWVkr2uQUEUhf3ET6GRaC5aFRoJKrf1BKpb8SwqovYGXkCj00k0QnRKEYkILYobvpUYmeMMyVnJl7P3mjN7Zu9zwiGv2qRFyMMSRrAFp6JPN8XzBj+wgDkUYAg7WINTYdwpDECxrRLJHeq2accdkgm8bzTvNAg2EDOGeUYI1KNO1gkuzTA1g8T7ojbn4ONQWPuHPWgeHmnzCqoe15tkSNPgPEAn68oVcOmA2XMtGK9FoE/VhOTTVNExqLCGZnxCv2pYauEC6lF0oQxX6IOvb7yX9NPEQafan+aPXDdQC18LsO6Tip5BBY6gIQaSbnMCFRCBZRcIvFkbsvCr4AFGOCxQy+JdGQAAAABJRU5ErkJggg==');
+  padding: 0.4em 0 0.4em 0.6em;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-40%);
+  opacity: 0.6;
+}
+
+.search_input > input {
+  width: 40%;
+  min-width: 220px;
+  font-size: 1.1em;
+  font-family: inherit;
+  color: #1c1c1c;
+  border: none;
+  padding: 0.5em 0.5em 0.5em 2em;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3) inset;
+  background: #f5f5f5;
+  border: 1px dashed rgba(0, 0, 0, 0.3);
+}
+
+.search_input > input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
