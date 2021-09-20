@@ -1,0 +1,59 @@
+.studentCard {
+  display: flex;
+  padding: 25px;
+  background-color: #ffffff;
+
+  @media all and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.info {
+  margin-left: 25px;
+
+  @media all and (max-width: 600px) {
+    margin: 0;
+  }
+}
+
+.name {
+  color: #ff9069;
+  text-transform: uppercase;
+
+  @media all and (max-width: 600px) {
+    text-align: center;
+    margin: 25px 0 10px;
+  }
+}
+
+.age {
+  color: #999ca4;
+}
+
+.avatarContainer {
+  flex: 0 0 128px;
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @media all and (max-width: 600px) {
+    margin: 0 auto;
+  }
+}
+
+.infoItem {
+  display: flex;
+}
+
+.infoLabel {
+  font-size: 14px;
+  color: #999ca4;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.infoValue {
+  color: #757985;
+  white-space: nowrap;
+}

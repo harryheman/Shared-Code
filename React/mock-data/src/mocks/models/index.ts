@@ -1,0 +1,1 @@
+export { StudentModel } from './StudentModel'

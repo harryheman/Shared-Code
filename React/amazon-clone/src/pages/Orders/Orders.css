@@ -1,0 +1,13 @@
+.orders {
+  padding: 20px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.orders__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

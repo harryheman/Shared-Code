@@ -1,0 +1,10 @@
+.studentsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+
+  @media all and (max-width: 1210px) {
+    grid-template-columns: repeat(1, min-content);
+    justify-content: center;
+  }
+}

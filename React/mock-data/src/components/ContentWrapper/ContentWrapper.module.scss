@@ -1,0 +1,25 @@
+.contentWrapper {
+  width: 100%;
+  max-width: 1170px;
+  // height: 100px;
+  flex: 1;
+  // background-color: #709dca;
+}
+
+.contentHeader {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.contentSubHeader {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+
+  a {
+    color: #709dca;
+    margin: 0 5px;
+  }
+}
