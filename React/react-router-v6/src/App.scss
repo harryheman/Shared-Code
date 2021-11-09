@@ -1,0 +1,42 @@
+nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    width: 320px;
+
+    img {
+      display: block;
+      width: 50px;
+      margin-right: 0.5rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+.user-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    margin-right: 0.5rem;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,5 @@
+export { Table } from './Table'
+export { MyLine } from './Line'
+export { MyArea } from './Area'
+export { MyBar } from './Bar'
+export { MyPie } from './Pie'
