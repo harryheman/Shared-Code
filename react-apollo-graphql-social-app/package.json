@@ -1,0 +1,19 @@
+{
+  "name": "react-social-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "apollo-server": "^2.21.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^6.0.0",
+    "graphql": "^15.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.0",
+    "supervisor": "^0.12.0"
+  },
+  "scripts": {
+    "start": "concurrently \"supervisor index.js\" \"yarn --cwd client start\""
+  }
+}
